@@ -32,6 +32,7 @@ def onValueChange(channel, sampleIndex, val, prev):
 	print('sending to arduino')
 	print(f"{chainIndex},{r},{g},{b}")
 	op('serial1').send(f"{str(chainIndex)},{str(r)},{str(g)},{str(b)},")
+	op('button_cross').click();
 	if n['hueIndex'].eval() == 0:
 		op('container1/button0').click();
 	if n['hueIndex'].eval() == 1:
